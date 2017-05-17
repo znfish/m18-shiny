@@ -1,11 +1,13 @@
 #INFO 201 M18 Exercise 5 Server
 
 #Require the following: shiny, HSUAR, dyplr, and ggplot2
-
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(HSAUR)
 
 #Load the dataset 'womensrole' from the HSUAR package (same way you would load a built in dataset)
-
-
+data <- womensrole
 
 #Here you will define the data that is shown based on your inputs defined in the UI
 #and turn it into an output plot
@@ -16,6 +18,8 @@ shinyServer(function(input, output) {
   output$plotNamehere <- renderPlot({
     
     #Here use your different input values to define what data is used to render your plot
+    
+    
     #The x axis will be the level of education
     #The y axis will be the level of agreement or disagreement
     #The dataset used will be filtered by sex
